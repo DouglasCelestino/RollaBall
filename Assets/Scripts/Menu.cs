@@ -5,17 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    [SerializeField] private string menu = "menu";
-    [SerializeField] private string jogo = "Game";
-    // Start is called before the first frame update
     public void Menu_iniciar()
     {
-        SceneManager.LoadScene(menu);
+        SceneManager.LoadScene(0);
     }
 
     public void Jogo()
     {
-        SceneManager.LoadScene(jogo);
+        SceneManager.LoadScene(1);
     }
     // Update is called once per frame
     public void Exit()
