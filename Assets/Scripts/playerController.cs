@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
    public TextMeshProUGUI countText;
    public GameObject winTextObject;
    public GameObject deadTextObject;
+   public AudioClip pickupSFX;
+   public AudioController AudioController;
 
    // Cronômetro
    private float timer = 0.0f;
@@ -93,6 +95,9 @@ public class PlayerController : MonoBehaviour
          other.gameObject.SetActive(false);
          count = count + 1;
          SetCountText();
+         AudioController.PlaySFX(pickupSFX);
+         //minus 1.25 seconds for each pickup
+         timer -= 1.25f;
       }
    }
 
